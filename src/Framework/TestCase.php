@@ -1386,7 +1386,6 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         $mockBuilder = $this->getMockBuilder($originalClassName)
             ->disableOriginalConstructor()
             ->disableOriginalClone()
-            ->disableArgumentCloning()
             ->onlyMethods($methods);
 
         if (!self::generateReturnValuesForTestDoubles()) {
