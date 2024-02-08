@@ -387,6 +387,10 @@ final class Generator
                 $isReadonly = true;
             }
 
+            if ($class->hasMethod('method')) {
+                throw new MethodNamedMethodException;
+            }
+
             // @see https://github.com/sebastianbergmann/phpunit/issues/2995
             if ($isInterface && $class->implementsInterface(Throwable::class)) {
                 $actualClassName        = Exception::class;
@@ -470,6 +474,10 @@ final class Generator
                     );
                 }
             }
+        }
+
+        if ($mockMethods->hasMethod('method')) {
+            throw new MethodNamedMethodException;
         }
 
         $mockedMethods = '';
