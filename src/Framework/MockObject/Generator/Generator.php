@@ -86,6 +86,7 @@ final class Generator
      * @throws DuplicateMethodException
      * @throws InvalidMethodNameException
      * @throws NameAlreadyInUseException
+     * @throws MethodNamedMethodException
      * @throws ReflectionException
      * @throws RuntimeException
      * @throws UnknownTypeException
@@ -194,6 +195,7 @@ final class Generator
     /**
      * @throws ClassIsEnumerationException
      * @throws ClassIsFinalException
+     * @throws MethodNamedMethodException
      * @throws ReflectionException
      * @throws RuntimeException
      *
