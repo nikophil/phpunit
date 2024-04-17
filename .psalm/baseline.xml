@@ -224,6 +224,14 @@
       <code><![CDATA[testDouble]]></code>
     </MissingThrowsDocblock>
   </file>
+  <file src="src/Framework/MockObject/Generator/MockBuilder.php">
+    <InvalidReturnStatement>
+      <code><![CDATA[$object]]></code>
+    </InvalidReturnStatement>
+    <InvalidReturnType>
+      <code><![CDATA[MockObject&MockedType]]></code>
+    </InvalidReturnType>
+  </file>
   <file src="src/Framework/MockObject/Generator/MockClass.php">
     <LessSpecificReturnStatement>
       <code><![CDATA[$this->mockName]]></code>
@@ -251,14 +259,6 @@
     <PossiblyFalseOperand>
       <code><![CDATA[strpos($parameterAsString, '<optional> ')]]></code>
     </PossiblyFalseOperand>
-  </file>
-  <file src="src/Framework/MockObject/MockBuilder.php">
-    <InvalidReturnStatement>
-      <code><![CDATA[$object]]></code>
-    </InvalidReturnStatement>
-    <InvalidReturnType>
-      <code><![CDATA[MockObject&MockedType]]></code>
-    </InvalidReturnType>
   </file>
   <file src="src/Framework/MockObject/Runtime/Builder/InvocationMocker.php">
     <PropertyTypeCoercion>
