@@ -28,6 +28,7 @@ use function serialize;
 use function sort;
 use function sprintf;
 use function substr;
+use function trait_exists;
 use Exception;
 use Iterator;
 use IteratorAggregate;
@@ -83,8 +84,8 @@ final class Generator
      * @throws ClassIsFinalException
      * @throws DuplicateMethodException
      * @throws InvalidMethodNameException
-     * @throws NameAlreadyInUseException
      * @throws MethodNamedMethodException
+     * @throws NameAlreadyInUseException
      * @throws ReflectionException
      * @throws RuntimeException
      * @throws UnknownTypeException
