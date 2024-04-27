@@ -74,23 +74,6 @@ final class MockBuilderTest extends TestCase
         $this->assertTrue($double->doSomething());
     }
 
-    #[IgnorePhpunitDeprecations]
-    #[TestDox('allowMockingUnknownTypes() can be used to allow mocking of unknown types')]
-    public function testCreatesMockObjectForUnknownType(): void
-    {
-        $type = 'Type_' . substr(md5((string) mt_rand()), 0, 8);
-
-        assert(!class_exists($type) && !interface_exists($type) && !trait_exists($type));
-
-        $double = $this->getMockBuilder($type)
-            ->allowMockingUnknownTypes()
-            ->getMock();
-
-        $this->assertInstanceOf($type, $double);
-        $this->assertInstanceOf(MockObject::class, $double);
-
-    }
-
     #[TestDox('Mocked methods can be called from the original constructor of a partially mocked class')]
     public function testOnlyMethodCalledInConstructorWorks(): void
     {
