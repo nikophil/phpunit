@@ -452,8 +452,10 @@ final class ErrorHandler
 
     private function triggerGlobalDeprecations(): void
     {
-        foreach ($this->globalDeprecations ?? [] as $d) {
+        foreach ($this->globalDeprecations as $d) {
             $this->__invoke(...$d);
         }
+
+        $this->globalDeprecations = [];
     }
 }
